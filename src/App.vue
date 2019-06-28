@@ -1,31 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <!-- 3用标签的形式使用 -->
+    <Nav/>
     <router-view/>
   </div>
 </template>
+<script>
+//1引入组件
+import Nav from './components/NaV'
+export default {
+  // 2注册
+  components:{
+    Nav
+  }
+} 
+</script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
+<style >
+
+
+ a {
+  text-decoration: none;
+  color: #333;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
